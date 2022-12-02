@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block body %}
+{{ form_start(form) }}
+    <label>Manufacturer Name</label>
+    {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder':"Manufacturer Name"}}) }}<br>
+    <label>Menufacturer Description</label>
+    {{ form_widget(form.description, {'attr': {'class': 'form-control','placeholder':"Manufacturer Description"}}) }}<br>
+    <label>Country Code</label>
+    {{ form_widget(form.countryCode, {'attr': {'class': 'form-control','placeholder':"Country Code"}}) }}<br>
+    <label>Listed Date</label>
+    {{ form_widget(form.listedDate, {'attr': {'class': 'form-control'}}) }}<br>
+    <button class="btn btn-warning">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+{% endblock %}

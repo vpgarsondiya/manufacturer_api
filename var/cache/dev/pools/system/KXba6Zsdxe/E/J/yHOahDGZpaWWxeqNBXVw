@@ -1,0 +1,41 @@
+<?php //subresource_operations_d6429d38dc582bf8dc61b17164570660
+
+return [PHP_INT_MAX, [
+    'api_manufacturers_products_get_subresource' => [
+        'property' => 'products',
+        'collection' => true,
+        'resource_class' => 'App\\Entity\\Product',
+        'shortNames' => [
+            'Product',
+            'Manufacturer',
+        ],
+        'legacy_filters' => [
+            'annotated_app_entity_product_api_platform_core_bridge_doctrine_orm_filter_search_filter',
+            'annotated_app_entity_product_api_platform_core_bridge_doctrine_orm_filter_order_filter',
+        ],
+        'legacy_normalization_context' => [
+            'groups' => [
+                'product.read',
+            ],
+        ],
+        'legacy_type' => null,
+        'identifiers' => [
+            'id' => [
+                'App\\Entity\\Manufacturer',
+                'id',
+                true,
+            ],
+        ],
+        'operation_name' => 'products_get_subresource',
+        'route_name' => 'api_manufacturers_products_get_subresource',
+        'path' => '/manufacturers/{id}/products.{_format}',
+        'defaults' => [],
+        'requirements' => [],
+        'options' => [],
+        'host' => '',
+        'schemes' => [],
+        'condition' => '',
+        'controller' => null,
+        'stateless' => null,
+    ],
+]];
